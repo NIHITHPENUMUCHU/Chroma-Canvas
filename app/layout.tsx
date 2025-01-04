@@ -12,14 +12,13 @@ export const metadata: Metadata = {
   description: 'Create and explore beautiful color palettes',
   manifest: '/manifest.json',
   icons: {
-    apple: '/apple-touch-icon.png',
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-    ]
+    ],
+    apple: '/apple-touch-icon.png',
   },
-  themeColor: '#ffffff',
+  themeColor: '#000000',
 }
 
 export default function RootLayout({
@@ -28,9 +27,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-theme="dark">
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
           <div className="min-h-screen bg-background flex flex-col">
             <Navigation />
             <main className="flex-grow container mx-auto py-8 px-4">
