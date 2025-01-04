@@ -40,7 +40,7 @@ export default function RootLayout({
                 <p className="text-sm text-gray-600">
                   For any queries or issues regarding the app, please contact:
                   <a href="mailto:admin@chromacanvas.com" className="text-blue-600 hover:underline ml-1">
-                    admin@chromacanvas.com
+                    nihithpenumuchu07@gmail.com
                   </a>
                 </p>
               </div>
